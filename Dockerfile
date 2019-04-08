@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update
-RUN apt-get install -f -y software-properties-common python-software-properties
+RUN apt-get install -f -y software-properties-common
 RUN add-apt-repository -y ppa:webupd8team/java
 RUN apt-get -qq update
 RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
